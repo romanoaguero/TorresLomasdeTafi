@@ -39,7 +39,6 @@
         font-style: italic;
         }
 
-
         * {
             margin: 0;
             padding: 0;
@@ -86,39 +85,38 @@
         .logo {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centra el contenido */
-            padding: 6px 8px; /* Ajusta el padding */
-            border-radius: 40px; /* Bordes redondeados */
-            background: linear-gradient(135deg, #040c18, #d9d9d92d); /* Degradado blanco a plateado */
+            justify-content: center;
+            padding: 6px 8px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, #040c18, #d9d9d92d);
             box-shadow: 
-            inset -2px -2px 6px rgba(255, 255, 255, 0.096), /* Efecto de luz en la parte superior izquierda */
-            inset 2px 2px 6px rgba(0, 0, 0, 0.2), /* Efecto de sombra en la parte inferior derecha */
-            0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra externa suave */
-            border: 2.5px solid var(--dark); /* Contorno amarillo */
-            transition: all 0.4s ease; /* Transición fluida */
+            inset -2px -2px 6px rgba(255, 255, 255, 0.096),
+            inset 2px 2px 6px rgba(0, 0, 0, 0.2),
+            0 6px 15px rgba(0, 0, 0, 0.1);
+            border: 2.5px solid var(--dark);
+            transition: all 0.4s ease;
         }
 
         .logo:hover {
-            background: linear-gradient(135deg, #040c18, #d9d9d92d); /* Degradado más claro al hacer hover */
+            background: linear-gradient(135deg, #040c18, #d9d9d92d);
             box-shadow: 
-            inset -2px -2px 8px rgba(255, 255, 255, 0.2), /* Intensifica el efecto 3D interno */
-            inset 2px 2px 8px rgba(0, 0, 0, 0.25), /* Intensifica el efecto de sombra */
-            0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra externa más pronunciada */
-            border: 2.5px solid var(--dark); /* Mantiene el contorno amarillo */
-            transform: translateY(-3px); /* Elevación ligera */
+            inset -2px -2px 8px rgba(255, 255, 255, 0.2),
+            inset 2px 2px 8px rgba(0, 0, 0, 0.25),
+            0 10px 25px rgba(0, 0, 0, 0.2);
+            border: 2.5px solid var(--dark);
+            transform: translateY(-3px);
         }
 
         .logo-img {
-            height: 40px; /* Tamaño ajustado */
+            height: 40px;
             width: auto;
-            transition: transform 0.4s ease, filter 0.4s ease; /* Animación más suave */
+            transition: transform 0.4s ease, filter 0.4s ease;
         }
 
         .logo:hover .logo-img {
-            transform: scale(1.08); /* Ajuste sutil en el efecto de hover */
-            filter: brightness(0.7); /* Ligero incremento en el brillo */
+            transform: scale(1.08);
+            filter: brightness(0.7);
         }
-
 
         .nav-links {
             display: flex;
@@ -317,7 +315,6 @@
             display: flex;
             align-items: flex-start;
             color: #555;
-
         }
 
         .feature-item i {
@@ -361,8 +358,6 @@
             margin-bottom: 5px;
         }
 
-
-       
 /* Masterplan Section */
 .masterplan {
     background-color: #f9f9f9;
@@ -427,8 +422,6 @@
     color: #555;
 }
 
-
-
 .masterplan-text.animated {
     animation: fadeInRight 1s forwards;
 }
@@ -450,7 +443,6 @@
     height: 3px;
     background: var(--secondary);
     color: #555;
-
 }
 
 .masterplan-features {
@@ -530,40 +522,6 @@
 .location-card p {
     color: #666;
     font-size: 0.9rem;
-}
-
-@media (max-width: 992px) {
-    .masterplan-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .masterplan-image {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .location-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .location-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .masterplan-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .masterplan-icon {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
 }
 
         /* Gallery Section */
@@ -940,7 +898,7 @@
             }
         }
 
-        /* Responsive */
+        /* Responsive Design - CORREGIDO */
         @media (max-width: 992px) {
             .about-content {
                 flex-direction: column;
@@ -953,6 +911,17 @@
             .contact-container {
                 flex-direction: column;
             }
+
+            .masterplan-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .masterplan-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -970,9 +939,10 @@
                 display: block;
             }
 
+            /* NAVBAR MOBILE FIX - Corregido completamente */
             .navbar {
-                max-width: 100%;
-                padding: 0 8px;
+                padding: 0 15px; /* Reducimos el padding lateral */
+                max-width: 100%; /* Aseguramos que use todo el ancho disponible */
             }
 
             .nav-links {
@@ -994,18 +964,21 @@
 
             .nav-links li {
                 margin: 15px 0;
+                margin-left: 0; /* Eliminamos el margin-left en mobile */
             }
 
             .section {
-                padding: 70px 20px;
+                padding: 70px 15px; /* Reducimos padding lateral */
             }
 
             .section-title h2 {
                 font-size: 2rem;
             }
-        }
+
+            .location-cards {
+                grid-template-columns: repeat(2, 1fr);
             }
-        
+        }
 
         @media (max-width: 576px) {
             .hero h1 {
@@ -1029,39 +1002,76 @@
             .gallery-container {
                 grid-template-columns: 1fr;
             }
+
+            .location-cards {
+                grid-template-columns: 1fr;
+            }
             
-
-
-            .location {
-                padding: 80px 20px;
-                background: #f5f7fa;
+            .masterplan-item {
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
-
-            .map-container {
-                max-width: 1000px;
-                margin: 0 auto;
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-                overflow: hidden;
+            
+            .masterplan-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
 
+            /* NAVBAR MOBILE EXTRA SMALL - Mayor corrección */
+            .navbar {
+                padding: 0 10px; /* Aún menos padding en pantallas muy pequeñas */
+            }
+
+            .section {
+                padding: 60px 10px; /* Menos padding en secciones */
+            }
+
+            #heroLogo {
+                margin-top: 60px !important;
+            }
+
+            .hero-gradient-text,
+            .text-gradient {
+                font-size: 1.2em !important;
+                padding: 10px !important;
+                word-break: break-word;
+                margin-left: 15px !important;
+                margin-right: 1px !important;
+                text-align: center !important;
+                max-width: calc(100vw - 20px);
+                box-sizing: border-box;
+            }
         }
 
-        /* Footer *//* Clase para aplicar el degradado al texto */
-    /* Clase para aplicar el degradado claro al texto */
-    .text-gradient {
-     background: linear-gradient(to right, white, #d9d9d9); /* Degradado claro */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la legibilidad */
-      font-weight: bold;
-      font-size: 3em;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-         
+        /* Ubicación Section */
+        .location {
+            padding: 80px 20px;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Clase para aplicar el degradado al texto */
+        .text-gradient {
+         background: linear-gradient(to right, white, #d9d9d9);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+          font-weight: bold;
+          font-size: 3em;
+          text-align: center;
+          margin: 0;
+          padding: 20px;
+        }
+           
     </style>
 </head>
 <body>
