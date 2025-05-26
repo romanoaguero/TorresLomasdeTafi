@@ -1092,12 +1092,19 @@
                     src="images/Logo - nuevo.png"
                     alt="AVITTA LOMAS Logo" 
                     id="heroLogo"
-                    style="height: 12rem; /* Aproximadamente el doble del h1 */
+                    style="height: 8rem; /* Aproximadamente el doble del h1 */
                            width: auto;
                            transition: transform 0.4s cubic-bezier(.4,2,.6,1), filter 0.4s;
                            cursor: pointer;"
                 >
             </div>
+            <style>
+                @media (max-width: 576px) {
+                    #heroLogo {
+                        margin-top: 60px !important;
+                    }
+                }
+            </style>
             <script>
                 // Logo transition on hover/tap (solo agrandar, </div>sin rotar)
                 const heroLogo = document.getElementById('heroLogo');
@@ -1120,7 +1127,22 @@
                 });
             </script>
             <p></p>
-            <p class="text-gradient">Descubre los departamentos más exclusivos en el corazón de la ciudad. Diseño moderno, amenities de primer nivel y vistas panorámicas.</p>
+            <p class="text-gradient hero-gradient-text">Descubre los departamentos más exclusivos en el corazón de la ciudad. Diseño moderno, amenities de primer nivel y vistas panorámicas.</p>
+            <style>
+                @media (max-width: 576px) {
+                    .hero-gradient-text,
+                    .text-gradient {
+                        font-size: 1.2em !important;
+                        padding: 10px !important;
+                        word-break: break-word;
+                        margin-left: 15px !important;
+                        margin-right: 15px !important;
+                        text-align: center !important;
+                        max-width: calc(100vw - 20px);
+                        box-sizing: border-box;
+                    }
+                }
+            </style>
             <div class="btn-group">
                 <a href="#contact" class="btn">Reserva Ahora</a>
                 <a href="#video" class="btn btn-outline">Ver Video</a>
@@ -1163,10 +1185,7 @@
         <button class="carousel-btn prev" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(26,58,110,0.7);color:white;border:none;border-radius:50%;width:36px;height:36px;font-size:20px;cursor:pointer;z-index:2;">&#10094;</button>
         <button class="carousel-btn next" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:rgba(26,58,110,0.7);color:white;border:none;border-radius:50%;width:36px;height:36px;font-size:20px;cursor:pointer;z-index:2;">&#10095;</button>
     </div>
-                <div class="image-badge" style="position:absolute;bottom:30px;right:-20px;">
-                    <h4>Entrega</h4>
-                    <p>Diciembre 2026</p>
-                </div>
+                
             </div>
         </div>
     </div>
