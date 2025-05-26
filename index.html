@@ -79,6 +79,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .logo {
@@ -951,8 +953,6 @@
             .contact-container {
                 flex-direction: column;
             }
-        }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -968,6 +968,11 @@
 
             .mobile-menu-btn {
                 display: block;
+            }
+
+            .navbar {
+                max-width: 100%;
+                padding: 0 8px;
             }
 
             .nav-links {
@@ -999,6 +1004,8 @@
                 font-size: 2rem;
             }
         }
+            }
+        
 
         @media (max-width: 576px) {
             .hero h1 {
@@ -1092,7 +1099,7 @@
                     src="images/Logo - nuevo.png"
                     alt="AVITTA LOMAS Logo" 
                     id="heroLogo"
-                    style="height: 8rem; /* Aproximadamente el doble del h1 */
+                    style="height: 7rem; /* Aproximadamente el doble del h1 */
                            width: auto;
                            transition: transform 0.4s cubic-bezier(.4,2,.6,1), filter 0.4s;
                            cursor: pointer;"
@@ -1136,7 +1143,7 @@
                         padding: 10px !important;
                         word-break: break-word;
                         margin-left: 15px !important;
-                        margin-right: 15px !important;
+                        margin-right: 1px !important;
                         text-align: center !important;
                         max-width: calc(100vw - 20px);
                         box-sizing: border-box;
